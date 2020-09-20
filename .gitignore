@@ -1,0 +1,11 @@
+# =================
+# LaTeX build files
+# =================
+
+*.aux
+*.bbl
+*.blg
+*.log
+*.toc
+*.synctex.gz
+*/sections/*.pdf

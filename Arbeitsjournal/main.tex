@@ -1,0 +1,33 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{subfiles}
+\usepackage[ngerman]{babel}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=1.25in}
+
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\makeatletter
+
+\title{Arbeitsjournal}
+\author{Thomas Herzog}
+\date{November 2020}
+
+
+
+\begin{document}
+	\maketitle
+	\pagebreak
+	
+	\renewcommand{\contentsname}{Inhaltsverzeichnis}
+	\tableofcontents
+	\pagebreak
+	
+	\subfile{sections/august}
+	\pagebreak
+	
+	\subfile{sections/september}
+	\pagebreak
+	
+\end{document}

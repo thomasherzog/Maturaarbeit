@@ -1,0 +1,46 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{subfiles}
+\usepackage[ngerman]{babel}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=1.25in}
+
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\makeatletter
+
+\title{{\huge Cannabis}\\ Die marktwirtschaftliche Legalisierung}
+\author{Thomas Herzog}
+\date{November 2020}
+
+% Silbentrennung ausschalten
+% \tolerance=1
+% \emergencystretch=\maxdimen
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+
+\begin{document}
+	\maketitle
+	\pagebreak
+	
+	\renewcommand{\contentsname}{Inhaltsverzeichnis}
+	\tableofcontents
+	\pagebreak
+	
+	\subfile{sections/preface}
+	\pagebreak
+	
+	\subfile{sections/introduction}
+	\pagebreak
+	
+	\subfile{sections/legalization}
+	\pagebreak
+	
+	\renewcommand{\refname}{Literaturverzeichnis}
+	\addcontentsline{toc}{section}{Literaturverzeichnis}
+	\bibliography{bibliography}
+	\bibliographystyle{apalike}
+	
+\end{document}
