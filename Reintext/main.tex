@@ -1,5 +1,6 @@
 \documentclass[a4paper, 12pt]{article}
 
+\usepackage{url}
 \usepackage{subfiles}
 \usepackage[ngerman]{babel}
 
@@ -15,10 +16,10 @@
 \date{November 2020}
 
 % Silbentrennung ausschalten
-% \tolerance=1
-% \emergencystretch=\maxdimen
-% \hyphenpenalty=10000
-% \hbadness=10000
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 
 \begin{document}
@@ -33,6 +34,12 @@
 	\pagebreak
 	
 	\subfile{sections/introduction}
+	\pagebreak
+	
+	\subfile{sections/drugusers}
+	\pagebreak
+	
+	\subfile{sections/drugmarkets}
 	\pagebreak
 	
 	\subfile{sections/legalization}
