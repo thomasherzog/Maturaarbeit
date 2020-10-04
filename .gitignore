@@ -7,5 +7,6 @@
 *.blg
 *.log
 *.toc
+*.out
 *.synctex.gz
 */sections/*.pdf

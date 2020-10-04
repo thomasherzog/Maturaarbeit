@@ -1,10 +1,11 @@
 \documentclass[a4paper, 12pt]{article}
 
+\usepackage{tcolorbox}
 \usepackage{subfiles}
 \usepackage[ngerman]{babel}
 
 \usepackage{geometry}
-\geometry{a4paper, margin=1.25in}
+\geometry{a4paper, margin=1in}
 
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
@@ -14,6 +15,12 @@
 \author{Thomas Herzog}
 \date{November 2020}
 
+
+% Silbentrennung ausschalten
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 
 \begin{document}
@@ -25,9 +32,10 @@
 	\pagebreak
 	
 	\subfile{sections/august}
-	\pagebreak
 	
 	\subfile{sections/september}
 	\pagebreak
+	
+	\subfile{sections/attachments}
 	
 \end{document}
