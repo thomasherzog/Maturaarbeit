@@ -1,31 +1,47 @@
 \documentclass[a4paper, 12pt]{article}
 
-\usepackage{tcolorbox}
 \usepackage{subfiles}
 \usepackage[shorthands=off, ngerman]{babel}
 \usepackage{hyperref}
 
-\usepackage{geometry}
-\geometry{a4paper, margin=1in}
+\usepackage{tcolorbox}
 
+
+% Margins
+\usepackage{geometry}
+\geometry{a4paper, left=2cm,right=2cm,top=3cm,bottom=3cm}
+
+% Line spacing
+\usepackage[onehalfspacing]{setspace}
+
+% Font
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
 \makeatletter
 
-\title{Arbeitsjournal}
-\author{Thomas Herzog}
-\date{November 2020}
-
-
-% Silbentrennung ausschalten
+% Hyphenation
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 
+% Title
+\title{{\huge Arbeitsjournal}}
+\author{Thomas Herzog}
+\date{November 2020}
+
+% Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \nouppercase{\leftmark}}
+\rhead{\small Thomas Herzog}
+\rfoot{\small \thepage}
 
 \begin{document}
+
 	\maketitle
+	\hrule
 	\pagebreak
 	
 	\renewcommand{\contentsname}{Inhaltsverzeichnis}
@@ -42,5 +58,11 @@
 	\pagebreak
 	
 	\subfile{sections/attachments}
+	\pagebreak
+	
+	\renewcommand{\refname}{Literaturverzeichnis}
+	\addcontentsline{toc}{section}{Literaturverzeichnis}
+	\bibliography{bibliography}
+	\bibliographystyle{apalike}
 	
 \end{document}

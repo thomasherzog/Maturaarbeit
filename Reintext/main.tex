@@ -4,35 +4,60 @@
 \usepackage{subfiles}
 \usepackage{hyperref}
 \usepackage[shorthands=off, ngerman]{babel}
-\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{pgfplots}
 
+
+% Margins
 \usepackage{geometry}
-\geometry{a4paper, margin=1.25in}
+\geometry{a4paper, left=2cm,right=2cm,top=3cm,bottom=3cm}
 
+% Line spacing
+\usepackage[onehalfspacing]{setspace}
+
+% Font
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
 \makeatletter
 
-\title{{\huge Cannabis}\\ Die marktwirtschaftliche Legalisierung}
-\author{Thomas Herzog}
-\date{November 2020}
-
-% Silbentrennung ausschalten
+% Hyphenation
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 
+% Graphics
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+
+% Title
+\title{{\huge Cannabis}\\ Die marktwirtschaftliche Legalisierung}
+\author{Thomas Herzog}
+\date{November 2020}
+
+% Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \nouppercase{\leftmark}}
+\rhead{\small Thomas Herzog}
+\rfoot{\small \thepage}
+
+
 \begin{document}
-	%\maketitle
-	%\pagebreak
+
+	\maketitle
+	\hrule
+	\pagebreak
 	
 	\renewcommand{\contentsname}{Inhaltsverzeichnis}
 	\tableofcontents
 	\pagebreak
 	
-	%\listoffigures
-	%\pagebreak
+	\listoffigures
+	\pagebreak
 	
 	\subfile{sections/preface}
 	\pagebreak
@@ -52,9 +77,9 @@
 	\subfile{sections/conclusion}
 	\pagebreak
 	
-	%\renewcommand{\refname}{Literaturverzeichnis}
-	%\addcontentsline{toc}{section}{Literaturverzeichnis}
-	%\bibliography{bibliography}
-	%\bibliographystyle{apalike}
+	\renewcommand{\refname}{Literaturverzeichnis}
+	\addcontentsline{toc}{section}{Literaturverzeichnis}
+	\bibliography{bibliography}
+	\bibliographystyle{apalike}
 	
 \end{document}
