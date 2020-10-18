@@ -4,6 +4,7 @@
 \usepackage{subfiles}
 \usepackage{hyperref}
 \usepackage[shorthands=off, ngerman]{babel}
+\usepackage{graphicx}
 
 \usepackage{geometry}
 \geometry{a4paper, margin=1.25in}
@@ -23,12 +24,15 @@
 \hbadness=10000
 
 \begin{document}
-	\maketitle
-	\pagebreak
+	%\maketitle
+	%\pagebreak
 	
 	\renewcommand{\contentsname}{Inhaltsverzeichnis}
 	\tableofcontents
 	\pagebreak
+	
+	%\listoffigures
+	%\pagebreak
 	
 	\subfile{sections/preface}
 	\pagebreak
@@ -48,9 +52,9 @@
 	\subfile{sections/conclusion}
 	\pagebreak
 	
-	\renewcommand{\refname}{Literaturverzeichnis}
-	\addcontentsline{toc}{section}{Literaturverzeichnis}
-	\bibliography{bibliography}
-	\bibliographystyle{apalike}
+	%\renewcommand{\refname}{Literaturverzeichnis}
+	%\addcontentsline{toc}{section}{Literaturverzeichnis}
+	%\bibliography{bibliography}
+	%\bibliographystyle{apalike}
 	
 \end{document}
