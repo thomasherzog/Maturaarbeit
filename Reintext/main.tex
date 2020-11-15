@@ -1,13 +1,19 @@
 \documentclass[a4paper, 12pt]{article}
 
+
 \usepackage{url}
 \usepackage{subfiles}
 \usepackage{hyperref}
-\usepackage[shorthands=off, ngerman]{babel}
 \usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{caption}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage{float}
+\usepackage{tcolorbox}
+\usepackage[bottom]{footmisc}
+\usepackage{amsmath}
 
 
 % Margins
@@ -45,6 +51,30 @@
 \rhead{\small Thomas Herzog}
 \rfoot{\small \thepage}
 
+% Language
+\usepackage[autostyle]{csquotes}
+\usepackage[shorthands=off, main=ngerman, english]{babel}
+
+% Bibliography
+\usepackage[
+	backend=biber,
+	style=authoryear,
+	sorting=nyt,
+	language=english,
+	autolang=langname
+]{biblatex}
+\addbibresource{bibliography.bib}
+\setlength\bibitemsep{0.5\baselineskip}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\usepackage{fnpct}
+\AdaptNoteOpt\footcite\multfootcite
+
+% Disable figures
+%\renewcommand{\includegraphics}[2][]{%
+%    \fbox{#2}% print file name in a small box
+%}
+
 
 \begin{document}
 
@@ -52,11 +82,10 @@
 	\hrule
 	\pagebreak
 	
-	\renewcommand{\contentsname}{Inhaltsverzeichnis}
-	\tableofcontents
+	\subfile{sections/tableofcontents}
 	\pagebreak
 	
-	\listoffigures
+	\subfile{sections/listoffigures}
 	\pagebreak
 	
 	\subfile{sections/preface}
@@ -74,12 +103,12 @@
 	\subfile{sections/analysis}
 	\pagebreak
 	
-	\subfile{sections/conclusion}
+	\subfile{sections/summary}
 	\pagebreak
 	
-	\renewcommand{\refname}{Literaturverzeichnis}
-	\addcontentsline{toc}{section}{Literaturverzeichnis}
-	\bibliography{bibliography}
-	\bibliographystyle{apalike}
+	\subfile{sections/attachments}
+	\pagebreak
+	
+	\subfile{sections/bibliography}
 	
 \end{document}

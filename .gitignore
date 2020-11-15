@@ -3,11 +3,13 @@
 # =================
 
 *.aux
+*.bcf
 *.bbl
 *.blg
 *.log
 *.toc
 *.lof
 *.out
+*.run.xml
 *.synctex.gz
 */sections/*.pdf
