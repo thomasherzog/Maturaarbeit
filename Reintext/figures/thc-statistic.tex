@@ -1,0 +1,109 @@
+\documentclass[tikz, border=3pt]{standalone}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}
+
+\begin{axis}[
+	xlabel = {Jahr},
+	ylabel = {THC-Gehalt},
+	xmin=2003, xmax=2020,
+	ymin=7, ymax=23,
+	width=12cm,
+	height=7cm,
+    scale only axis,
+	xtick={
+		2004,
+		2005,
+		2006,
+		2007,
+		2008,
+		2009,
+		2010,
+		2011,
+		2012,
+		2013,
+		2014,
+		2015,
+		2016,
+		2017,
+		2018,
+		2019
+	},
+	xticklabels={
+		2004,
+		2005,
+		2006,
+		2007,
+		2008,
+		2009,
+		2010,
+		2011,
+		2012,
+		2013,
+		2014,
+		2015,
+		2016,
+		2017,
+		2018,
+		2019
+	},
+	yticklabel={\pgfmathprintnumber\tick\%},
+	axis lines=middle,
+    grid=major,
+    grid style={dashed},
+    x tick label style={rotate=90,anchor=east},    
+    x label style={at={(axis description cs:0.5,-0.15)},anchor=north},
+    y label style={at={(axis description cs:-0.1,.5)},rotate=90,anchor=south},
+    legend style={at={(1.15,1)},anchor=north}
+]
+
+
+% Haschisch
+\addplot[smooth, thick, mark=*, mark size=1pt, red] coordinates {
+	(2004, 14.6)
+	(2005, 15.1)
+	(2006, 13.2)
+	(2007, 10.4)
+	(2008, 11.9)
+	(2009, 11.3)
+	(2010, 12.7)
+	(2011, 15.3)
+	(2012, 14.8)
+	(2013, 17.3)
+	(2014, 17.0)
+	(2015, 19.3)
+	(2016, 17.8)
+	(2017, 19.1)
+	(2018, 21.0)
+	(2019, 22.0)
+};
+	
+% Cannabis
+\addplot[smooth, thick, mark=*, mark size=1pt, blue] coordinates {
+	(2004, 9.7)
+	(2005, 10.4)
+	(2006, 8.5)
+	(2007, 8.6)
+	(2008, 8.4)
+	(2009, 10.0)
+	(2010, 10.7)
+	(2011, 9.2)
+	(2012, 11.2)
+	(2013, 12.2)
+	(2014, 11.6)
+	(2015, 12.3)
+	(2016, 11.2)
+	(2017, 9.8)
+	(2018, 11.5)
+	(2019, 11.2)
+};
+	
+\legend{Haschisch, Cannabis}
+
+\end{axis}
+
+\end{tikzpicture}
+\end{document}

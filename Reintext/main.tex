@@ -3,17 +3,22 @@
 
 \usepackage{url}
 \usepackage{subfiles}
-\usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{booktabs}
-\usepackage{tabularx}
 \usepackage{caption}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{float}
 \usepackage{tcolorbox}
+\usepackage{enumitem}
 \usepackage[bottom]{footmisc}
 \usepackage{amsmath}
+
+
+\usepackage[
+	pdftitle={Cannabis - Die marktwirtschaftliche Legalisierung},
+	pdfauthor={Thomas Herzog}
+]{hyperref}
 
 
 % Margins
@@ -38,10 +43,13 @@
 \usepackage{graphicx}
 \graphicspath{{./images/}}
 
+% Tables
+\usepackage{tabularx}
+
 % Title
 \title{{\huge Cannabis}\\ Die marktwirtschaftliche Legalisierung}
-\author{Thomas Herzog}
-\date{November 2020}
+\author{Thomas Herzog, W6m \\ \large Maturitätsarbeit an der Kantonsschule Zürich Nord}
+\date{\large Zürich, 30.11.2020\linebreak \linebreak \small{Betreuer: Reto Ammann}}
 
 % Header and footer
 \usepackage{fancyhdr}
@@ -61,19 +69,17 @@
 	style=authoryear,
 	sorting=nyt,
 	language=english,
-	autolang=langname
+	autolang=langname,
+	citetracker=true,
+	pagetracker=true
 ]{biblatex}
 \addbibresource{bibliography.bib}
 \setlength\bibitemsep{0.5\baselineskip}
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
+
 \usepackage{fnpct}
 \AdaptNoteOpt\footcite\multfootcite
-
-% Disable figures
-%\renewcommand{\includegraphics}[2][]{%
-%    \fbox{#2}% print file name in a small box
-%}
 
 
 \begin{document}
@@ -81,7 +87,7 @@
 	\maketitle
 	\hrule
 	\pagebreak
-	
+
 	\subfile{sections/tableofcontents}
 	\pagebreak
 	
