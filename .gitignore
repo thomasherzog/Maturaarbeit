@@ -9,6 +9,7 @@
 *.log
 *.toc
 *.lof
+*.lot
 *.out
 *.run.xml
 *.synctex.gz

@@ -1,5 +1,4 @@
-\documentclass[a4paper, 12pt]{article}
-
+\documentclass[a4paper, twoside, 12pt]{article}
 
 \usepackage{url}
 \usepackage{subfiles}
@@ -13,7 +12,7 @@
 \usepackage{enumitem}
 \usepackage[bottom]{footmisc}
 \usepackage{amsmath}
-
+\usepackage[T1]{fontenc}
 
 \usepackage[
 	pdftitle={Cannabis - Die marktwirtschaftliche Legalisierung},
@@ -23,7 +22,8 @@
 
 % Margins
 \usepackage{geometry}
-\geometry{a4paper, left=2cm,right=2cm,top=3cm,bottom=3cm}
+\geometry{a4paper, twoside, left=2cm,right=2cm,top=3cm,bottom=3cm}
+\raggedbottom
 
 % Line spacing
 \usepackage[onehalfspacing]{setspace}
@@ -46,29 +46,27 @@
 % Tables
 \usepackage{tabularx}
 
-% Title
-\title{{\huge Cannabis}\\ Die marktwirtschaftliche Legalisierung}
-\author{Thomas Herzog, W6m \\ \large Maturitätsarbeit an der Kantonsschule Zürich Nord}
-\date{\large Zürich, 30.11.2020\linebreak \linebreak \small{Betreuer: Reto Ammann}}
-
 % Header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \nouppercase{\leftmark}}
-\rhead{\small Thomas Herzog}
-\rfoot{\small \thepage}
+%\lhead{\small \nouppercase{\leftmark}}
+%\rhead{\small Thomas Herzog}
+%\rfoot{\small \thepage}
+
+\fancyhead[LE, RO]{\small \nouppercase{\leftmark}}
+\fancyfoot[LE, RO]{\small \thepage}
 
 % Language
 \usepackage[autostyle]{csquotes}
-\usepackage[shorthands=off, main=ngerman, english]{babel}
+\usepackage[shorthands=off, main=ngerman]{babel}
 
 % Bibliography
 \usepackage[
 	backend=biber,
 	style=authoryear,
 	sorting=nyt,
-	language=english,
+	language=ngerman,
 	autolang=langname,
 	citetracker=true,
 	pagetracker=true
@@ -77,32 +75,40 @@
 \setlength\bibitemsep{0.5\baselineskip}
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
-
 \usepackage{fnpct}
 \AdaptNoteOpt\footcite\multfootcite
+\renewbibmacro*{in:}{%
+  \iffieldundef{journaltitle}
+    {}
+    {\printtext{\bibstring{in}\intitlepunct}}}
 
 
 \begin{document}
 
-	\maketitle
-	\hrule
+	\pagenumbering{gobble}
+	\subfile{sections/titlepage}
 	\pagebreak
-
+	
+	
+	\pagenumbering{roman}
 	\subfile{sections/tableofcontents}
 	\pagebreak
 	
 	\subfile{sections/listoffigures}
+	\subfile{sections/listoftables}
 	\pagebreak
 	
 	\subfile{sections/preface}
 	\pagebreak
 	
+	
+	\pagenumbering{arabic}
 	\subfile{sections/introduction}
 	\pagebreak
 	
 	\subfile{sections/drugmarkets}
 	\pagebreak
-	
+
 	\subfile{sections/legalization}
 	\pagebreak
 	
@@ -111,9 +117,9 @@
 	
 	\subfile{sections/summary}
 	\pagebreak
-	
-	\subfile{sections/attachments}
-	\pagebreak
+
+	%\subfile{sections/attachments}
+	%\pagebreak
 	
 	\subfile{sections/bibliography}
 	
